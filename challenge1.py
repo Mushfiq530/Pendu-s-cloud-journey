@@ -1,0 +1,5 @@
+name = input("What is your name ? ")
+age = int(input("What is your age? "))
+print(f"my name is {name} and it is a {type(name)}data type")
+print(f"I am only {age} and it is a {type(age)} data type")
+print(f"In next five years I'll be {age+5} years old")
