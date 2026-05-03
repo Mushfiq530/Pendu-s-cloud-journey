@@ -1,0 +1,58 @@
+### Today I've practiced some of the conditionals of python. 
+
+if condition:
+    # runs if condition is True
+elif another_condition:
+    # runs if the first was False, but this is True
+else:
+    # runs if none of the above were True
+
+
+This is the basic structures of python conditional statements.  
+Then I wrote some simple conditions to check:
+cpu_usage = 85
+
+if cpu_usage > 90:
+    print("CRITICAL: CPU usage too high!")
+elif cpu_usage > 70:
+    print("WARNING: CPU usage is elevated.")
+else:
+    print("OK: CPU usage is normal.")
+
+Here I understood about operators:
+Operators:
+                    
+== equal to
+!=not equal to
+>greater than
+<less than
+>=greater than or equal
+<=less than or equal
+
+Then I tried another one with user input:
+
+environment = input("Enter environment (dev/staging/prod): ")
+
+if environment == "prod":
+    print(" Production environment — be careful!")
+elif environment == "staging":
+    print("Staging environment — test freely.")
+elif environment == "dev":
+    print("Dev environment — go wild!")
+else:
+    print("Unknown environment entered.")
+
+Then for one last time I tried one more with better test cases:
+
+
+cpu_usage = int(input("CPU Used: "))
+memory_usage = int(input("memory Used: "))
+if cpu_usage > 90 or memory_usage > 90 :
+    print("Critical")
+elif cpu_usage > 70 and cpu_usage<90 or memory_usage >70 and memory_usage<90:
+    print("Warning") 
+else :
+    print("Your cpu condition and memory condition is just fine")       
+
+
+

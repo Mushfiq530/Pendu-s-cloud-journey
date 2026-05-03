@@ -1,0 +1,76 @@
+### today I've learned that Linux permission has 3 groups and 3 permission types!
+
+groups:
+Owner _ u
+Group - g
+Others - o
+
+Permission:
+Read - r(4)
+Write - w(2)
+Execute - x(1)
+
+
+If I run ls-l in my terminal, somthing like below will be appear:
+-rwxr-xr--  1 pendu pendu  512 Mar 18 file.sh
+
+which means:
+- rwx r-x r--
+│ │   │   └── others: read only
+│ │   └── group: read + execute
+│ └── owner: read + write + execute
+└── file type (- = file, d = directory)
+
+We can change permissions by using the command chmod!
+
+such as: 
+chmod u+x file.sh      # give owner execute
+chmod o-w file.sh      # remove write from others
+chmod g+rw file.sh     # give group read + write
+
+We can do these things by numeric method too!
+
+chmod 755 file.sh      # rwxr-xr-x
+chmod 644 file.sh      # rw-r--r--
+chmod 600 secret.txt   # rw------- (only owner can read/write)
+
+
+### Then I learned something called "redirection"
+
+echo "hello" > file.txt      # write to file (overwrites)
+echo "world" >> file.txt     # append to file
+cat file.txt                 # read it back
+
+ls /fakepath 2> error.txt    # redirect errors to a file
+ls /fakepath 2>> error.txt   # append errors
+
+ls > out.txt 2>&1            # redirect BOTH stdout and stderr to same file
+
+Well this kinda goes above my head!
+1 = stdout (normal output)
+2 = stderr (errors)
+
+Until I leaned these twoes!
+
+Then I learned about piping:
+ls -l | grep ".sh"           # list only .sh files
+cat file.txt | wc -l         # count lines in a file
+
+basically it count lines inside a bash scripted files!
+
+Then I completed the below challenge to evaluate my learnings!
+
+Create a bash script that does all of the following:                    
+                      
+                      
+  
+
+Creates a file called server_log.txt and writes the text "Server started" into it
+Appends "Health check passed" to the same file
+Displays the contents of the file using cat
+Sets the file permissions to 644
+Prints the permissions using ls -l server_log.txt
+
+
+The solution is in my github!
+

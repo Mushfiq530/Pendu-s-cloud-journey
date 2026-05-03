@@ -1,0 +1,5 @@
+### just set up kali,powershell and my cloud set up
+
+I learned about some instructions on how to install and set up environment in kali and my terminal
+
+Mostly I've used cd and ls command to understand wehre I am and what files I have in my directory

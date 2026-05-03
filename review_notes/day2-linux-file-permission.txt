@@ -1,0 +1,51 @@
+### today I've learned to use use some more linux commands in my terminal. Those are:
+
+pwd          # print working directory — where am I right now?
+ls           # list files in current directory
+ls -la       # list ALL files (including hidden) with details
+cd ~         # go to your home directory
+cd /         # go to the root of the filesystem
+ls           # see what's at the root
+cd ~         # come back home
+
+### Then I learned about how to create a text file, write inside it and print what is inside the file:
+cd day2_practice
+touch notes.txt            # create an empty file
+echo "Hello Linux" > notes.txt    # write text into it
+cat notes.txt              # print file contents
+echo "Second line" >> notes.txt   # APPEND (>> vs > — know the difference!)
+cat notes.txt
+
+### Then I learned about how to copy,move and delete files by using below commands:
+cp notes.txt notes_backup.txt     # copy
+mv notes_backup.txt archive.txt   # rename (move)
+ls
+rm archive.txt                    # delete
+ls
+
+
+### Then I learned about how to search a file:
+ls -la ~               # what's in your home dir?
+find . -name "*.txt"   # find all .txt files from current dir downward
+
+### Lastly I learned about how to create a longer file but don't know where will it help me right now haha:
+
+# Create a longer file to practice with
+for i in {1..20}; do echo "Line $i" >> bigfile.txt; done
+
+cat bigfile.txt        # prints everything
+head bigfile.txt       # first 10 lines
+tail bigfile.txt       # last 10 lines
+head -n 5 bigfile.txt  # first 5 lines
+
+# Then I completed one challenge:
+
+Create a directory called cloudops                    
+  
+Inside it, create three files: compute.txt, storage.txt, network.txt
+Write one line into each file describing what that AWS category does (just your guess is fine)
+Print all three files using cat
+Delete network.txt, then confirm it's gone with ls
+
+
+Which I have done and solution is already in my github
